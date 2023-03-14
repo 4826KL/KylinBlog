@@ -1,0 +1,85 @@
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <img src="{{ LOGO }}" class="logo-img" alt="LOGO">
+                    <span class="logo-span"> {{ SITE_NAME }}</span>
+                </a>
+
+            </div>
+            <!--pc导航栏-->
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+            <ul class="right nav-menu">
+                <li class="hide-on-med-and-down nav-item">
+                    <a href="/" class="waves-effect waves-light">
+                        <i class="fas fa-home" style="zoom: 0.6;"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+
+{#            前台分类显示 forloop 循环 每一行记录作为一个对象 对象.字段名进行渲染#}
+{#            从views.py中的add_nav中读取category_nav报文，for循环遍历读取，渲染到导航栏#}
+                {% for category in category_nav  %}
+                <li class="hide-on-med-and-down nav-item">
+                    <a href="{% url 'article_category' category.id %}" class="waves-effect waves-light">
+                        <i class="{{ category.icon }}" style="zoom: 0.6;"></i>
+                        <span>{{ category.name }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+
+                <li class="hide-on-med-and-down nav-item">
+                    <a href="" class="waves-effect waves-light">
+                        <i class="fas fa-list" style="zoom: 0.6;"></i>
+                        <span>整理</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+                    </a>
+                    <ul class="sub-nav menus_item_child ">
+                        <li>
+                            <a href="{% url 'category_tag' %}">
+                                <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+                                <span>归类</span>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="../article_tag/1">
+                                <i class="fas fa-file-contract" style="margin-top: -20px; zoom: 0.6;"></i>
+                                <span>归档</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="hide-on-med-and-down nav-item">
+                    <a href="{% url 'about' %}" class="waves-effect waves-light">
+                        <i class="fas fa-id-card-alt" style="zoom: 0.6;"></i>
+                        <span>关于</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'search' %}" class="waves-effect waves-light">
+                        <i  class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+                    </a>
+                </li>
+
+            <li class="hide-on-med-and-down nav-item">
+                    <a href="{% url 'register' %}" class="waves-effect waves-light">
+                        <i class="fas fa-id-card-alt" style="zoom: 0.6;"></i>
+                        <span>注册</span>
+                    </a>
+                </li>
+
+            <li class="hide-on-med-and-down nav-item">
+                    <a href="http://127.0.0.1:8011/admin/login/?next=/admin/" class="waves-effect waves-light">
+                        <i class="fas fa-id-card-alt" style="zoom: 0.6;"></i>
+                        <span>登录</span>
+                    </a>
+            </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>

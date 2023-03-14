@@ -1,0 +1,18 @@
+.back{background:#181015 url("images/back.jpg") no-repeat; background-size: cover;}
+.login{background:#181015 url("images/log_in.jpg") no-repeat; background-size: cover;}
+.register{background:#181015 url("images/regis.jpg") no-repeat; background-size: cover;}
+.forget{background:#181015 url("images/for_get.jpg") no-repeat; background-size: cover;}
+.bg{padding-top:100px;background:#181015 url("images/background.jpg") no-repeat; background-size: cover;}
+.reset{background:#181015 url("images/reset.jpg") no-repeat; background-size: cover;}
+.comment{background:#181015 url("images/comm.png") no-repeat; background-size: cover;}
+.contact{background:#181015 url("images/contact.png") no-repeat; background-size: cover;}
+
+
+
+.footer2 { background: #191919; padding: 15px 0; color: #777; font-size: 12px; }
+	.footer2 a { color: #aaa; }
+		.footer2 a:hover { color: #fff; }
+		.footer2 p { margin: 0; }
+
+	.widget-simplenav { margin-left:-5px; }
+	.widget-simplenav a{ margin:0 5px; }

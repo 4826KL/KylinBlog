@@ -1,0 +1,1 @@
+INSERT INTO `kblog_valine` (`id`, `appid`, `appkey`, `avatar`, `pagesize`, `placeholder`) VALUES (1, 'ariHD4UOtwONOgKDf3c5jsVJ-gzGzoHsz', 'PKkunDFMcOs8VnNJE9XmzPFV', '', 10, '[昵称和邮箱必填，网址选填。填上邮箱，会给你发送评论提醒]ヾﾉ≧∀≦)o 请畅所欲言~');
